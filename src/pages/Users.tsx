@@ -7,7 +7,7 @@ import Sidebar from "../components/layout/Sidebar";
 function Users() {
   return (
     <div>
-      <Navbar userName="Cristian"/>
+      <Navbar/>
 
       <div className="container">
         <Sidebar />

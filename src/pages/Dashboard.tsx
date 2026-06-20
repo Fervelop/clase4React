@@ -6,7 +6,7 @@ import Card from "../components/ui/Card";
 function Dashboard() {
   return (
     <div>
-      <Navbar userName="Cristian"/>
+      <Navbar />
 
       <div className="container">
         <Sidebar />

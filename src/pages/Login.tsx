@@ -6,12 +6,11 @@ import { useContext } from "react";
 function Login() {
   const navigate = useNavigate();
 
+ const usercontext = useContext(UserContext);
+
   const handleLogin = () => {
 
-
-    const usercontext = useContext(UserContext);
-
-    const userInfo = {
+      const userInfo = {
 
       name: "Cristian",
       email: "cristian@test.com",
