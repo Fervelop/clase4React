@@ -1,11 +1,25 @@
 import { useNavigate } from "react-router-dom";
-
+import { UserContext } from "../context/UserContext";
 import Button from "../components/ui/Button";
+import { useContext } from "react";
 
 function Login() {
   const navigate = useNavigate();
 
   const handleLogin = () => {
+
+
+    const usercontext = useContext(UserContext);
+
+    const userInfo = {
+
+      name: "Cristian",
+      email: "cristian@test.com",
+      rol: "Admin"
+    };
+
+    usercontext?.login(userInfo);
+
     navigate("/dashboard");
   };
 

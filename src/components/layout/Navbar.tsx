@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css"
 
+interface NavbarProps {
+  userName: string;
+}
 
-function Navbar() {
+
+function Navbar({userName} : NavbarProps) {
   return (
     <nav className="navbar">
-      <h2>Mi Aplicación</h2>
+      <h2>Mi Aplicación, Bienvenido {userName}</h2>
        <Link to="/users">
             Usuarios
         </Link>
