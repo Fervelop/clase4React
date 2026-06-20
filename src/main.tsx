@@ -3,12 +3,14 @@ import { createRoot } from 'react-dom/client'
 import { UserProvider } from './context/UserContext.tsx'
 import './index.css'
 import App from './App.tsx'
-
+import { Provider } from 'react-redux'
+import { store } from './app/store.ts'
 import '../src/styles/global.css'
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <UserProvider>
+    <Provider store={store}>
       <App />
-    </UserProvider>
+    </Provider>
   </StrictMode>,
 )

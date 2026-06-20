@@ -2,12 +2,14 @@ import { useNavigate } from "react-router-dom";
 import { UserContext } from "../context/UserContext";
 import Button from "../components/ui/Button";
 import { useContext } from "react";
+import { useDispatch } from "react-redux";
+import { login } from "../features/user/userSlice";
 
 function Login() {
   const navigate = useNavigate();
 
- const usercontext = useContext(UserContext);
-
+ // const usercontext = useContext(UserContext);
+  const dispatch = useDispatch()
   const handleLogin = () => {
 
       const userInfo = {
@@ -17,7 +19,8 @@ function Login() {
       rol: "Admin"
     };
 
-    usercontext?.login(userInfo);
+    // usercontext?.login(userInfo);
+    dispatch(login(userInfo));
 
     navigate("/dashboard");
   };
